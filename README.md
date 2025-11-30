@@ -324,9 +324,10 @@ The Liberty files are present in the library path,
 
 
 #### Fig 12: Tabulate Area,Power and Timing Report Comparision of ALU using case and ifelseif construct
-<img width="1317" height="631" alt="image" src="https://github.com/user-attachments/assets/2927fc76-0d3b-431e-9f36-827e482dfcea" />
+<img width="464" height="292" alt="image" src="https://github.com/user-attachments/assets/53908eca-8736-4eb9-88c8-d6b40c86f465" />
 
 
 ## Result
-The 32-bit ALU implemented using behavioural case statements and if–elseif constructs was successfully verified under Incisive (ncvlog/ncsim) for all tested vectors. Both implementations were functionally correct and synthesizable. Synthesis using Cadence Genus generated gate-level netlists along with area, timing, and power reports.
-A comparative analysis revealed that the case-statement-based ALU resulted in slightly lower area and better timing performance, while the if–elseif-based ALU exhibited higher logic complexity and marginally increased delay due to sequential decision evaluation. Both designs, however, produced identical functional outputs.
+The 32-bit ALU designs implemented using behavioural case statements and if–elseif constructs were successfully verified using the Incisive simulation environment (ncvlog/ncsim) for all applied test vectors. Both RTL descriptions were found to be functionally correct, synthesizable, and capable of producing identical outputs across all operations. Cadence Genus synthesis generated corresponding gate-level netlists and produced detailed reports for area and power.
+
+Based on the synthesis observations, the if–elseif–based ALU demonstrates better efficiency, achieving a lower total cell area (9913.876 µm²) compared to the case-based ALU (10254.481 µm²). Power results also indicate that the if–elseif model consumes slightly lower total logic, leakage, internal, and switching power. Although both designs meet functional requirements, the if–elseif architecture shows marginal improvements in area and power, while the case-based design is comparatively larger and consumes marginally more power.
